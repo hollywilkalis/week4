@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Boop Beep!</title>
+    <title>When Pizza Goes Wrong</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -9,7 +9,42 @@
   </head>
   <body>
     <div class="container">
-      
+      <h1>Welcome to When Pizza Goes Wrong</h1>
+      <form id="pizza-builder">
+
+        <div class="form-group">
+          <p class="form-label">What size pizza do you want?</p>
+          <label for="size">Choose one</label>
+          <select class="form-control" id="size">
+            <option value="1">Small (serves 1)</option>
+            <option value="2">Medium (serves 2-3)</option>
+            <option value="3">Large (serves 3-4)</option>
+            <option value="4">Gigantic (so big, we hope you're throwing a party)</option>
+          </select>
+        </div>
+
+        <p class="form-label">What do you want on your pizza?</p>
+        <div class="form-check">
+          <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" value="extracheese">
+          Extra cheese
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="pepperoni">
+            Pepperoni
+          </label>
+        </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" value="chocolate">
+            Chocolate
+          </label>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">Get the price for your order!</button>
+        </form>
+
     </div><!--close container-->
 
   </body>

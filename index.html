@@ -8,28 +8,31 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
+
   <body>
     <div class="container">
       <img src="img/bad-pizza.png" alt="a comic about pizza" class="img-fluid mx-auto d-block">
       <h1>Welcome to<br>When Pizza Goes Wrong</h1>
-      <h2>Where is our mission is proving that there is such a thing as bad pizza</h2>
+      <h2>Where our mission is proving that there is such a thing as bad pizza</h2>
+
       <form id="pizza-builder">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <h3>Choose your pizza size</h3>
+              <h3>First, choose your pizza size</h3>
+              <p>All pizzas come with soggy crust, watery tomato sauce, and RealCheese(TM)</p>
               <label for="size">Choose one</label>
-              <select class="form-control" id="size">
-                <option value="small">Small (serves 1)</option>
-                <option value="medium">Medium (serves 2-3)</option>
-                <option value="large">Large (serves 3-4)</option>
-                <option value="gigantic">Gigantic (so big, we hope you're throwing a party)</option>
-              </select>
-            </div>
+                <select class="form-control" id="size">
+                  <option value="SMALL">Small (serves 1), $10.00</option>
+                  <option value="MEDIUM">Medium (serves 2-3), $15.00</option>
+                  <option value="LARGE">Large (serves 3-4), $20.00</option>
+                  <option value="GIGANTIC">Gigantic (so big, we hope you're throwing a party), $30.00</option>
+                </select>
+            </div><!--close form group-->
           </div><!---close column-->
 
           <div class="col-md-6">
-            <h3>Choose your toppings</h3>
+            <h3>Next, add extra toppings for just $2.00 each</h3>
             <div class="form-check">
               <label class="form-check-label">
                 <input type="checkbox" name="topping" class="form-check-input" value="cheese">Extra cheese</input>
@@ -57,20 +60,21 @@
             </div>
           </div><!--close column-->
           <button id="button" type="button" name="button" class="btn-danger btn-lg btn-block">Get the price for your order!</button>
-          </form>
         </div><!--close row-->
+      </form>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card card-body" id="orderConfirmation">
-              <h4 class="card-title">Your order</h4>
-              <p class="card-text" id="yourOrder">
-
-              </p>
-            </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-body" id="orderConfirmation">
+            <h4 class="card-title">Your order</h4>
+            <p class="card-text" id="yourOrder">
+              <!--text about order goes here-->
+            </p>
           </div>
-        </div>
-    </div><!--close container-->
+        </div><!--close column-->
+      </div><!--close row-->
+      <footer>Want a pizza delivered to your worst enemy? Playing a prank on the neighbor whose dog keeps pooping on your lawn? We can help! However, please note that any legal charges resulting from their consumption of our food will be your responsibility.</footer>
 
+    </div><!--close container-->
   </body>
 </html>

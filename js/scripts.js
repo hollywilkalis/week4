@@ -1,3 +1,4 @@
+//business logic goes here
 var numberToppings;
 var toppingQuantity;
 var size;
@@ -12,7 +13,7 @@ function Pizza(size, numberToppings) {
 }
 
 Pizza.prototype.yourPizzaOrder = function(){
-  return this.size + ", " + this.price;
+  return this.size + ", $" + this.price;
 }
 
 Pizza.prototype.setPizzaPrice = function() {
@@ -32,11 +33,12 @@ Pizza.prototype.setPizzaPrice = function() {
 $(document).ready(function() {
   $("#button").click(function(event) {
     event.preventDefault();
-    debugger;
 
     var size = $("select#size").val();
     var pizzaOrder = new Pizza(size, numberToppings);
-    $("ul#yourOrder").append("<li>" + pizzaOrder.yourPizzaOrder() + "</span></li>");
+    $("#yourOrder").text(pizzaOrder.yourPizzaOrder());
+
+    $('#pizza-builder')[0].reset();
 
   }); //submit event
 });//document ready

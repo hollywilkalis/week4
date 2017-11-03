@@ -13,7 +13,7 @@ function Pizza(size, numberToppings) {
 }
 
 Pizza.prototype.yourPizzaOrder = function(){
-  return this.size + ", $" + this.price;
+  return "You ordered a " + this.size + " pizza and the cost will be $" + this.price;
 }
 
 Pizza.prototype.setPizzaPrice = function() {
@@ -36,6 +36,7 @@ $(document).ready(function() {
 
     var size = $("select#size").val();
     var pizzaOrder = new Pizza(size, numberToppings);
+    $("#orderConfirmation").show();
     $("#yourOrder").text(pizzaOrder.yourPizzaOrder());
 
     $('#pizza-builder')[0].reset();

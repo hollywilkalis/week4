@@ -4,37 +4,71 @@
     <title>When Pizza Goes Wrong</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Cabin" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to When Pizza Goes Wrong</h1>
+      <img src="img/bad-pizza.png" alt="a comic about pizza" class="img-fluid mx-auto d-block">
+      <h1>Welcome to<br>When Pizza Goes Wrong</h1>
+      <h2>Where is our mission is proving that there is such a thing as bad pizza</h2>
       <form id="pizza-builder">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <h3>Choose your pizza size</h3>
+              <label for="size">Choose one</label>
+              <select class="form-control" id="size">
+                <option value="small">Small (serves 1)</option>
+                <option value="medium">Medium (serves 2-3)</option>
+                <option value="large">Large (serves 3-4)</option>
+                <option value="gigantic">Gigantic (so big, we hope you're throwing a party)</option>
+              </select>
+            </div>
+          </div><!---close column-->
 
-        <div class="form-group">
-          <p class="form-label">What size pizza do you want?</p>
-          <label for="size">Choose one</label>
-          <select class="form-control" id="size">
-            <option value="small">Small (serves 1)</option>
-            <option value="medium">Medium (serves 2-3)</option>
-            <option value="large">Large (serves 3-4)</option>
-            <option value="gigantic">Gigantic (so big, we hope you're throwing a party)</option>
-          </select>
-        </div>
+          <div class="col-md-6">
+            <h3>Choose your toppings</h3>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" name="topping" class="form-check-input" value="cheese">Extra cheese</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" name="topping" class="form-check-input" label="Pepperoni">Pepperoni</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" name="topping" class="form-check-input" label="Sardines">Sardines</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" name="topping" class="form-check-input" label="Hateballs">Hateballs</input>
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" name="topping" class="form-check-input" label="Mushrooms">Mushrooms of indeterminate origin</input>
+              </label>
+            </div>
+          </div><!--close column-->
+          <button id="button" type="button" name="button" class="btn-danger btn-lg btn-block">Get the price for your order!</button>
+          </form>
+        </div><!--close row-->
 
-        <p class="form-label">What do you want on your pizza?</p>
-          <div class="form-group">
-            <input type="checkbox" name="topping" value="extracheese">Extra cheese</input>
-            <input type="checkbox" name="topping" value="chocolate">Chocolate</input>
-            <input type="checkbox" name="topping" value="sardines">Sardines</input>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-body" id="orderConfirmation">
+              <h4 class="card-title">Your order</h4>
+              <p class="card-text" id="yourOrder">
+
+              </p>
+            </div>
           </div>
-        <button id="button" type="button" name="button">Get the price for your order!</button>
-        </form>
-
-        <div id="orderConfirmation">
-          <ul id="yourOrder">
-          </ul>
         </div>
     </div><!--close container-->
 
